@@ -11,8 +11,8 @@ const portfolioData = {
       pt: "Curitiba - PR, Brasil (Disponível para Remoto / Híbrido)"
     },
     status: {
-      en: "Open to exciting opportunities & impactful AI / Frontend projects",
-      pt: "Aberto a projetos inovadores e oportunidades em IA e Frontend"
+      en: "Work in progress...",
+      pt: "Em construção..."
     },
     bio: {
       en: "Software Engineer and AI Specialist with over 6 years of frontend experience and 11 years in the tech industry. Specialist in React, React Native, TypeScript, JavaScript, and applied Generative AI solutions. Proven expertise in building high-performance web and mobile applications, SPAs, PWAs, and offline-first architectures with real-time WebSocket synchronization and REST API integrations.",
