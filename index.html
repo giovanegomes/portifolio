@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal Portfolio and Curriculum Vitae of Giovane Aires Gomes - Software Engineer and AI Specialist.">
+  <meta name="author" content="Giovane Aires Gomes">
+  <title>Giovane Aires Gomes | Software Engineer / AI Specialist</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/print.css">
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#home" class="nav-brand" aria-label="Giovane Aires Gomes Home">
+        <span class="nav-brand-dot"></span>
+        <span>Giovane Aires Gomes</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active" data-i18n="navHome">Home</a>
+        <a href="#about" class="nav-link" data-i18n="navAbout">About</a>
+        <a href="#resume" class="nav-link" data-i18n="navResume">Resume</a>
+        <a href="#projects" class="nav-link" data-i18n="navProjects">Projects</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="nav-controls">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Select Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button type="button" id="theme-toggle-btn" class="btn-icon" aria-label="Toggle dark/light theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="nav-menu"
+          aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-glow-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <!-- Availability Pill -->
+        <div class="hero-status-pill reveal">
+          <span class="status-dot-pulse"></span>
+          <span id="hero-status-text">Available for Remote / Hybrid</span>
+        </div>
+
+        <h1 class="hero-title reveal delay-100">
+          <span data-i18n="greeting"></span> <span class="gradient-text" id="hero-name">Giovane Aires Gomes</span>
+        </h1>
+
+        <p class="hero-headline font-mono reveal delay-200" id="hero-headline">
+          Software Engineer / AI Specialist
+        </p>
+
+        <p class="hero-description reveal delay-300" id="hero-desc">
+          Engineering resilient web architectures, modern agentic systems, and high-performance digital products.
+        </p>
+
+        <!-- Print Bar (Visible exclusively on print/PDF) -->
+        <div id="print-contact-bar" class="print-contact-bar" style="display: none;"></div>
+
+        <!-- Action CTAs -->
+        <div class="hero-actions reveal delay-400">
+          <a href="#resume" class="btn btn-primary" data-i18n="btnResume">Curriculum Vitae</a>
+          <button type="button" class="btn btn-outline print-resume-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span data-i18n="btnDownloadCV">Print / Save PDF</span>
+          </button>
+          <a href="#projects" class="btn btn-outline" data-i18n="btnViewProjects">View Projects</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="btnContact">Get in Touch</a>
+        </div>
+
+        <!-- Social Media Quick Links -->
+        <div class="hero-socials reveal delay-400">
+          <a href="https://github.com/giovanegomes" id="hero-github-link" target="_blank" rel="noopener noreferrer"
+            class="btn-icon" aria-label="GitHub Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/giovanegomes/" id="hero-linkedin-link" target="_blank"
+            rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#contact" class="btn-icon" aria-label="Contact Section">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div id="metrics-container" class="metrics-grid"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="aboutTitle">About Me</span>
+          <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
+          <p class="section-subtitle" data-i18n="aboutSubtitle">
+            Engineering the intersection of resilient software and intelligent automation.
+          </p>
+        </div>
+
+        <div class="timeline-content reveal" style="max-width: 860px; margin: 0 auto; padding: var(--space-8);">
+          <p id="about-bio" style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-6);"></p>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-4); margin-top: var(--space-6);">
+            <div style="border-left: 3px solid var(--accent-primary); padding-left: var(--space-3);">
+              <h4 style="font-size: var(--text-base); margin-bottom: 2px;">AI-Driven Engineering</h4>
+              <p style="font-size: var(--text-xs); color: var(--text-muted);">Agentic pipelines, LLM orchestration, and
+                RAG knowledge systems.</p>
+            </div>
+            <div style="border-left: 3px solid var(--accent-secondary); padding-left: var(--space-3);">
+              <h4 style="font-size: var(--text-base); margin-bottom: 2px;">Full Stack & Microservices</h4>
+              <p style="font-size: var(--text-xs); color: var(--text-muted);">Decoupled, high-availability distributed
+                systems.</p>
+            </div>
+            <div style="border-left: 3px solid #10b981; padding-left: var(--space-3);">
+              <h4 style="font-size: var(--text-base); margin-bottom: 2px;">Clean Code & Architecture</h4>
+              <p style="font-size: var(--text-xs); color: var(--text-muted);">Zero-dependency focus, accessibility, and
+                high performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="resumeTitle">Curriculum Vitae</span>
+          <h2 class="section-title" data-i18n="resumeTitle">Curriculum Vitae</h2>
+          <p class="section-subtitle" data-i18n="resumeSubtitle">
+            A track record of technical leadership, scalable architectures, and continuous innovation.
+          </p>
+        </div>
+
+        <!-- Print Action Bar -->
+        <div class="resume-actions-bar reveal"
+          style="display: flex; justify-content: flex-end; margin-bottom: var(--space-6);">
+          <button type="button" class="btn btn-outline btn-sm print-resume-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span data-i18n="btnDownloadCV">Print / Save PDF</span>
+          </button>
+        </div>
+
+        <div class="resume-layout">
+          <!-- Work Experience Column -->
+          <div>
+            <h3 class="resume-col-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-primary);">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span data-i18n="experienceTitle">Work Experience</span>
+            </h3>
+            <div id="experience-timeline" class="timeline"></div>
+          </div>
+
+          <!-- Education & Certifications Column -->
+          <div style="margin-top: var(--space-8);">
+            <h3 class="resume-col-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-secondary);">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span data-i18n="educationTitle">Education & Certifications</span>
+            </h3>
+            <div id="education-timeline" class="timeline"></div>
+          </div>
+
+          <!-- Skills Matrix -->
+          <div style="margin-top: var(--space-8);">
+            <h3 class="resume-col-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <span data-i18n="skillsTitle">Core Competencies & Tech Stack</span>
+            </h3>
+            <div id="skills-container" class="skills-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="projectsTitle">Projects</span>
+          <h2 class="section-title" data-i18n="projectsTitle">Featured Projects</h2>
+          <p class="section-subtitle" data-i18n="projectsSubtitle">
+            Selected work showcasing AI integrations, full-stack systems, and intuitive interfaces.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar reveal">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+          <button type="button" class="filter-btn" data-filter="ai" data-i18n="filterAI">AI & Agents</button>
+          <button type="button" class="filter-btn" data-filter="fullstack" data-i18n="filterFullStack">Full
+            Stack</button>
+          <button type="button" class="filter-btn" data-filter="frontend" data-i18n="filterFrontend">Frontend</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-container" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="contactTitle">Contact</span>
+          <h2 class="section-title" data-i18n="contactTitle">Contact & Collaboration</h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">
+            Have a project in mind, an opportunity, or want to discuss AI-driven engineering? Let's connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="reveal">
+            <a href="mailto:giovaneag33@gmail.com" id="contact-email-link" class="contact-info-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 style="font-size: var(--text-sm); color: var(--text-muted); text-transform: uppercase;"
+                  data-i18n="emailLabel">Email</h4>
+                <span id="contact-email-text"
+                  style="font-weight: 600; color: var(--text-primary);">giovaneag33@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/5542999885444" id="contact-phone-link" target="_blank" rel="noopener noreferrer"
+              class="contact-info-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4 style="font-size: var(--text-sm); color: var(--text-muted); text-transform: uppercase;"
+                  data-i18n="phoneLabel">Phone / WhatsApp</h4>
+                <span id="contact-phone-text" style="font-weight: 600; color: var(--text-primary);">(42) 9
+                  9988-5444</span>
+              </div>
+            </a>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h4 style="font-size: var(--text-sm); color: var(--text-muted); text-transform: uppercase;"
+                  data-i18n="locationLabel">Location</h4>
+                <span id="contact-location-text" style="font-weight: 600; color: var(--text-primary);">Curitiba - PR,
+                  Brasil</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-6);">
+              <button type="button" id="copy-email-btn" class="btn btn-outline btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span data-i18n="copyEmail">Copy Email</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form reveal delay-200">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label" data-i18n="formNamePlaceholder">Full Name</label>
+                <input type="text" id="form-name" class="form-control" required
+                  data-i18n-placeholder="formNamePlaceholder" placeholder="Your Name">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label" data-i18n="formEmailPlaceholder">Email Address</label>
+                <input type="email" id="form-email" class="form-control" required
+                  data-i18n-placeholder="formEmailPlaceholder" placeholder="your.email@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label" data-i18n="formSubjectPlaceholder">Subject</label>
+                <input type="text" id="form-subject" class="form-control" required
+                  data-i18n-placeholder="formSubjectPlaceholder" placeholder="Subject">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label" data-i18n="formMessagePlaceholder">Message</label>
+                <textarea id="form-message" class="form-control" required data-i18n-placeholder="formMessagePlaceholder"
+                  placeholder="Write your message..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span data-i18n="btnSendMessage">Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="form-status" class="form-status" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Accessible Dialog Modal -->
+  <dialog id="project-modal" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <div>
+        <span id="modal-badge" class="project-category-badge"></span>
+        <h3 id="modal-title" style="margin-top: var(--space-2); font-size: var(--text-2xl);"></h3>
+      </div>
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p id="modal-desc" style="color: var(--text-secondary); line-height: 1.7;"></p>
+      <h4
+        style="font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-top: var(--space-6);">
+        Key Highlights & Technical Impact
+      </h4>
+      <ul id="modal-highlights-list" class="modal-highlights"></ul>
+      <div id="modal-tags" class="project-tags" style="margin-top: var(--space-4);"></div>
+      <div style="display: flex; gap: var(--space-3); margin-top: var(--space-6);">
+        <a id="modal-repo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Source
+          Code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year">2026</span> Giovane Aires Gomes. <span data-i18n="footerRights">All rights
+          reserved.</span></p>
+      <p style="font-size: var(--text-xs); color: var(--text-dim);" data-i18n="footerBuiltWith">
+        Crafted with pure HTML5, CSS3, & Vanilla JS. AI-optimized with Antigravity.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

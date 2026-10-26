@@ -1,0 +1,227 @@
+/* css/print.css - Printable Resume & PDF Export Styles */
+@media print {
+  /* Page Setup */
+  @page {
+    margin: 1.2cm;
+    size: A4 portrait;
+  }
+
+  /* Reset Defaults for Print */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Elements to Hide During Print */
+  .skip-link,
+  .site-header,
+  .hero-glow-bg,
+  .hero-status-pill,
+  .hero-actions,
+  .hero-socials,
+  .metrics-grid,
+  #about,
+  #projects,
+  #contact,
+  .site-footer,
+  dialog#project-modal,
+  .btn,
+  .lang-switcher,
+  .mobile-toggle,
+  .section-badge,
+  .resume-actions-bar,
+  #print-resume-btn {
+    display: none !important;
+  }
+
+  /* Print Header (From Hero) */
+  .hero {
+    padding: 0 0 1rem 0 !important;
+    border-bottom: 2pt solid #111827 !important;
+    margin-bottom: 1.5rem !important;
+    page-break-after: avoid;
+  }
+
+  .hero-content {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+
+  .hero-title {
+    font-size: 24pt !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.25rem !important;
+    color: #000000 !important;
+  }
+
+  .hero-title .gradient-text {
+    -webkit-text-fill-color: #000000 !important;
+    color: #000000 !important;
+    background: none !important;
+  }
+
+  .hero-headline {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    color: #374151 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-description {
+    font-size: 10.5pt !important;
+    color: #4b5563 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Print Contact Pill Bar */
+  .print-contact-bar {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 9.5pt !important;
+    color: #4b5563 !important;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* Resume Section Structure */
+  #resume {
+    padding: 0 !important;
+  }
+
+  .section-header {
+    display: none !important;
+  }
+
+  .resume-col-title {
+    font-size: 13pt !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1pt solid #9ca3af;
+    padding-bottom: 3pt;
+    margin-top: 1rem !important;
+    margin-bottom: 0.75rem !important;
+    page-break-after: avoid;
+  }
+
+  .timeline {
+    padding-left: 0 !important;
+  }
+
+  .timeline::before {
+    display: none !important;
+  }
+
+  .timeline-dot {
+    display: none !important;
+  }
+
+  .timeline-item {
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+
+  .timeline-content {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .timeline-header {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .timeline-role {
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+  }
+
+  .timeline-company {
+    font-size: 10pt !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .timeline-period {
+    font-size: 9pt !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    font-weight: 600 !important;
+    color: #4b5563 !important;
+  }
+
+  .timeline-highlights {
+    margin: 0.25rem 0 !important;
+    padding-left: 1.2rem !important;
+  }
+
+  .timeline-highlights li {
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+    color: #374151 !important;
+    margin-bottom: 2pt !important;
+  }
+
+  .timeline-tags {
+    margin-top: 0.25rem !important;
+    gap: 4pt !important;
+  }
+
+  .timeline-tags .project-tag {
+    background: none !important;
+    border: 1px solid #d1d5db !important;
+    color: #374151 !important;
+    font-size: 8pt !important;
+    padding: 1pt 4pt !important;
+  }
+
+  /* Skills Matrix for Print */
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+    page-break-inside: avoid;
+  }
+
+  .skill-card {
+    background: transparent !important;
+    border: 1pt solid #e5e7eb !important;
+    border-radius: 4pt !important;
+    padding: 0.5rem !important;
+  }
+
+  .skill-category-title {
+    font-size: 10pt !important;
+    margin-bottom: 0.35rem !important;
+    font-weight: 700 !important;
+  }
+
+  .skill-pills {
+    gap: 3pt !important;
+  }
+
+  .skill-pill {
+    background: none !important;
+    border: 1pt solid #d1d5db !important;
+    color: #111827 !important;
+    font-size: 8pt !important;
+    padding: 2pt 5pt !important;
+  }
+}
