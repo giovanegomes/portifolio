@@ -50,7 +50,7 @@ You can run the portfolio locally without installing any tools:
 
 ### Option 1: Using Antigravity's Built-in Node (`agy-node`)
 ```powershell
-& "C:\Users\giovane.gomes\AppData\Roaming\Antigravity\bin\agy-node.cmd" server.js 3000
+&  server.js 3000
 ```
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
